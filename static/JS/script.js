@@ -34,6 +34,6 @@ newsletterForm.addEventListener('submit', async (e) => {
             errorMessage.textContent = 'Invalid email address. Please enter a valid email.';
         }
     } else {
-        console.error('An error occurred while validating the email.');
+        errorMessage.textContent = 'An error occurred while validating the email.';
     }
 });
