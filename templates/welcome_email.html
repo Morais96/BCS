@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to our newsletter</title>
+    <style>
+        body {
+          background-color: white;
+          margin: 2rem;
+        }
+        
+        p {
+          color: blue;
+          font-family: 'Suisse Intl';
+          font-size: 1rem;
+          text-align: center;
+        }
+        
+        hr {
+          width: 60%;
+          border: 1px solid blue;
+        }
+        
+        h1 {
+          color: blue;
+          font-family: 'Burriqueira';
+          font-size: 3rem;
+          font-weight: 400;
+          text-align: center;
+        }
+        
+        a {
+          text-decoration: none;
+          font-family: 'Suisse Intl';
+          font-size: 1rem;
+          color: blue;
+        }
+        
+        img {
+          width: 100%;
+          height: 50rem;
+          filter: grayscale(0%) sepia(100%) hue-rotate(180deg) saturate(400%);
+        }
+        
+        .img-container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <p>Welcome to Burriqueira!</p>
+    <hr>
+    <p>Thank you for subscribing! As a subscriber of Burriqueira's newsletter, you'll be updated on our latest products, events and news.</p>
+    <div class="img-container">
+        {% for image in images %}
+        <img src="cid:{{ image }}">
+        <br>
+        {% endfor %}
+    </div>
+    <p>If you have any questions, please e-mail us at support@burriqueira.com</p>
+    <h1>BURRIQUEIRA</h1>
+    <p><a class="website-link" href="https://www.burriqueira.com">www.burriqueira.com</a></p>
+    <p>&copy; 2023 Burriqueira / <a href="">Instagram</a> / <a href="">Unsubscribe</a></p>
+</body>
+</html>
